@@ -88,7 +88,7 @@ public class XPlaneInterface {
 	}
 	
 	/**
-	 * This method starts the interface with X-Plane.
+	 * starts the interface with X-Plane.
 	 */
 	public void start() {
 		startReceiving();
@@ -96,7 +96,7 @@ public class XPlaneInterface {
 	}
 	
 	/**
-	 * This method stops the interface with X-Plane.
+	 * stops the interface with X-Plane.
 	 */
 	public void stop() {
 		stopReceiving();
@@ -104,14 +104,14 @@ public class XPlaneInterface {
 	}
 	
 	/**
-	 * This method starts the thread that is responsible to receive data from X-Plane.
+	 * starts the thread that is responsible to receive data from X-Plane.
 	 */
 	public void startReceiving() {
 		xPlaneUDPReceiver.start();
 	}
 	
 	/**
-	 * This method stops the thread that is responsible to receive data from X-Plane.
+	 * stops the thread that is responsible to receive data from X-Plane.
 	 */
 	public void stopReceiving() {
 		xPlaneUDPReceiver.setKeep_running(false);
@@ -126,7 +126,7 @@ public class XPlaneInterface {
 	}
 	
 	/**
-	 * This method register (in X-Plane) the messages that must be received from X-Plane
+	 * Register (in X-Plane) the messages that must be received from X-Plane
 	 * The argument is a comma separated string. 
 	 * 
 	 * In practice, this method will send DSEL messages to X-Plane.
@@ -152,7 +152,7 @@ public class XPlaneInterface {
 	}
 
 	/**
-	 * This method unregister (in X-Plane) the messages that must not be received from X-Plane
+	 * Unregister (in X-Plane) the messages that must not be received from X-Plane
 	 * The argument is a comma separated string.
 	 *  
 	 * In practice, this method will send USEL messages to X-Plane.
