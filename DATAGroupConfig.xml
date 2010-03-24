@@ -1,0 +1,112 @@
+<DATAGroups> 
+	<DATAGroup name="position">
+		<Entries>
+			<DATA name="ias" message="3" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="eas" message="3" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="tas" message="3" parameter="2" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="gs" message="3" parameter="3" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="lat" message="20" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="lon" message="20" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="altMsl" message="20" parameter="2" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="altAgl" message="20" parameter="3" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="altInd" message="20" parameter="5" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="X" message="21" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="Y" message="21" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="Z" message="21" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="vX" message="21" parameter="3" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="vY" message="21" parameter="4" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="vZ" message="21" parameter="5" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="distNm" message="21" parameter="7" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+	
+	<DATAGroup name="orientation">
+		<Entries>
+			<DATA name="pitch" message="18" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="roll" message="18" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="headingTrue" message="18" parameter="2" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="headingMag" message="18" parameter="3" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="magComp" message="18" parameter="4" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="magvar" message="18" parameter="7" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+
+	<DATAGroup name="time">
+		<Entries>
+			<DATA name="realTime" message="1" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="totalTime" message="1" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="missingTime" message="1" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="timer" message="1" parameter="3" readOnly="f" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+
+	<DATAGroup name="engine">
+		<Entries>
+			<DATA name="throttleCommand1" message="25" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="throttleActual1" message="26" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+	
+	<DATAGroup name="controls">
+		<Entries>
+			<DATA name="flapHandl" message="13" parameter="3" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="flapPosition" message="13" parameter="4" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+
+	<DATAGroup name="atmAircraft">
+		<Entries>
+			<DATA name="AMpress" message="6" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="AMtemperature" message="6" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="LEtemperature" message="6" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="dens" message="6" parameter="3" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+
+	<DATAGroup name="misc">
+		<Entries>
+			<DATA name="vvi" message="4" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+
+	<DATAGroup name="fuel">
+		<Entries>
+			<DATA name="total" message="63" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+
+			<DATA name="fuel1" message="62" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuel2" message="62" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuel3" message="62" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuel4" message="62" parameter="3" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuel5" message="62" parameter="4" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuel6" message="62" parameter="5" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuel7" message="62" parameter="6" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuel8" message="62" parameter="7" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+	
+			<DATA name="fuelFlow1" message="45" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuelFlow2" message="45" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuelFlow3" message="45" parameter="2" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuelFlow4" message="45" parameter="3" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuelFlow5" message="45" parameter="4" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuelFlow6" message="45" parameter="5" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuelFlow7" message="45" parameter="6" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuelFlow8" message="45" parameter="7" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+	
+	<DATAGroup name="autopilot">
+		<Entries>
+			<DATA name="fdirMode" message="108" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="navArm" message="116" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="altArm" message="116" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="appArm" message="116" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="autoThrottle" message="117" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="modeHeading" message="117" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="modeAlt" message="117" parameter="2" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="speed" message="118" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="heading" message="118" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="vvi" message="118" parameter="2" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="dialAlt" message="118" parameter="3" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="useAlt" message="118" parameter="5" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>	
+</DATAGroups>
