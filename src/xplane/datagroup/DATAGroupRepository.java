@@ -9,7 +9,7 @@ public class DATAGroupRepository {
 	private Map<Integer, Map<Integer, DATA>> dataByMessage;
 
 	public DATAGroupRepository() {
-		dataGroups = DATAGroupFactory.createDATAGroupsFromXML("/media/truecrypt1/Dados/Desenvolvimento/Java/Projetos/workspaceJ2SE/XPlaneInterface/DATAGroupConfig.xml");
+		dataGroups = DATAGroupFactory.createDATAGroupsFromXML("DATAGroupConfig.xml");
 		buildDATAByMessage();
 	}
 	
