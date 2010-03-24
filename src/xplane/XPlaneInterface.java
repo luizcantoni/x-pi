@@ -24,7 +24,7 @@ import xplane.message.XPlaneUDPMessage;
 import xplane.util.Util;
 
 /**
-* XPlaneDataPacketDecoder.java
+* XPlaneInterface.java
 * 
 * This class provides the interface between an application and X-Plane. 
 * With this class it is possible to receive and send data to X-Plane.
