@@ -1,16 +1,18 @@
-package xplane;
+package xplane.test;
 
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Teste  {
+import xplane.XPlaneInterface;
+
+public class Test  {
 	public static void main(String[] args) {
 		XPlaneInterface xpi = null;
 
 		try {
-			xpi = new XPlaneInterface("192.168.1.126", 49003, 49002);
+			xpi = new XPlaneInterface("192.168.1.126", 49002, 49000);
 			xpi.unregisterDATAMessages("*");
 			xpi.registerDATAMessages("1,3,4,6,13,18,20,21,25,45,62,108,116,117,118");
 			xpi.startReceiving();
@@ -46,15 +48,5 @@ public class Teste  {
 		values.put("time.timer", 2.2f);
 		values.put("engine.throttleCommand1", 1.0f);
 		xpi.setValues(values);
-		
-//		for(int i = 0; i < 5000; i++) {
-//			try {
-//				Thread.sleep(10);
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//			xpi.setValue("timer", (float)i);
-//		}
 	}
 }
