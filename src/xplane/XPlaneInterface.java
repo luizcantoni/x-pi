@@ -29,6 +29,24 @@ import xplane.util.Util;
 * This class provides the interface between an application and X-Plane. 
 * With this class it is possible to receive and send data to X-Plane.
 * 
+* There is a important XML where must be configured the types of messages received and sent to X-Plane. 
+* There is an example: DATAGroupConfig.xml.
+* 
+* It's very easy to use (for simplicity we are ommiting try catch):
+* 
+* XPlaneInterface xpi = null;			
+* xpi = new XPlaneInterface("192.168.1.126", 49002, 49000, "DATAGroupConfig.xml");
+* xpi.unregisterDATAMessages("*");
+* xpi.registerDATAMessages("1,3,4,6,13,18,20,21,25,45,62,108,116,117,118");
+* xpi.startReceiving();
+* Thread.sleep(1000);
+* 
+* //getting a value (in this case the Indicated air speed)
+* float f = xpi.getValue("position.ias");
+* System.out.println(f);
+* //setting a value (in this case, the throttle)
+* xpi.setValue("engine.throttleCommand1", 0.567f);
+* 
 * Copyright (C) 2010 Luiz Cantoni (luiz.cantoni@gmail.com)
 * 
 * This program is free software; you can redistribute it and/or
@@ -60,11 +78,11 @@ public class XPlaneInterface {
 	 * @throws SocketException
 	 * @throws UnknownHostException
 	 */
-	public XPlaneInterface(String xplaneIP, int receivePort, int sendPort) throws SocketException, UnknownHostException {
+	public XPlaneInterface(String xplaneIP, int receivePort, int sendPort, String dataGroupConfigXML) throws SocketException, UnknownHostException {
 		xPlaneUDPReceiver = new XPlaneUDPReceiver(xplaneIP, receivePort);
 		xPlaneUDPSender = new XPlaneUDPSender(xplaneIP, sendPort);
 		dataMessageRepository = new DATAMessageRepository();
-		dataGroupRepository = new DATAGroupRepository();
+		dataGroupRepository = new DATAGroupRepository(dataGroupConfigXML);
 		xPlaneUDPReceiver.addReceptionObserver(new XPlaneDataPacketDecoder(dataMessageRepository, dataGroupRepository));
 		messagesToSend = new HashMap<Integer, DATAMessage>();
 	}

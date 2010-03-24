@@ -12,7 +12,7 @@ public class Test  {
 		XPlaneInterface xpi = null;
 
 		try {
-			xpi = new XPlaneInterface("192.168.1.126", 49002, 49000);
+			xpi = new XPlaneInterface("192.168.1.126", 49002, 49000, "DATAGroupConfig.xml");
 			xpi.unregisterDATAMessages("*");
 			xpi.registerDATAMessages("1,3,4,6,13,18,20,21,25,45,62,108,116,117,118");
 			xpi.startReceiving();
