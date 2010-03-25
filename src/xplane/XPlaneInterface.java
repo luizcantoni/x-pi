@@ -1,10 +1,8 @@
 package xplane;
 
-import java.io.IOException;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -29,7 +27,9 @@ import xplane.util.Util;
 * This class provides the interface between an application and X-Plane. 
 * With this class it is possible to receive and send data to X-Plane.
 * 
-* There is a important XML where must be configured the types of messages received and sent to X-Plane. 
+* There is an important XML where must be configured the types of messages received and sent to X-Plane.
+* This XML is the mapping between the X-PI and X-Plane. 
+*  
 * There is an example: DATAGroupConfig.xml.
 * 
 * It's very easy to use (for simplicity we are ommiting try catch):
@@ -152,14 +152,17 @@ public class XPlaneInterface {
 	}
 
 	/**
-	 * Unregister (in X-Plane) the messages that must not be received from X-Plane
+	 * Unregister (in X-Plane) the m桔獩堠䱍椠⁳桴⁥慭灰湩⁧敢睴敥⁮桴⁥偉堭愠摮堠倭慬敮essages that must not be received from X-Plane
 	 * The argument is a comma separated string.
 	 *  
 	 * In practice, this method will send USEL messages to X-Plane.
 	 * 
-	 * unregisterDataMessage("1,2,56,89")
+	 * unregisterDataMessage("1,2,56,89") or
+	 * unregisterDataMessage("*")
 	 * 
-	 * @param data
+	 * "*" means that all messages will be unregister.
+	 * 
+	 * @param data - a String comma separated
 	 */
 	public void unregisterDATAMessages(String data) {
 		if (data.equals("*")) {
@@ -196,15 +199,39 @@ public class XPlaneInterface {
 		}
 	}
 	
+	/**
+	 * gets a value from X-Plane. 
+	 * 
+	 * Example: float f = xpi.getValue("position.lat")
+	 * 
+	 * @param key - A String in the following format: groupName.dataName
+	 * @return - a float value
+	 */
 	public float getValue(String key) {
 		String[] auxKey = key.split("\\.");
 		return getValue(auxKey[0], auxKey[1]);
 	}
 	
+	/**
+	 * gets a value from X-Plane. 
+	 * 
+	 * Example: float f = xpi.getValue("position", "lat")
+	 *
+	 * @param groupName - the DATAGroup name
+	 * @param dataName - the DATA name
+	 * @return - a float value
+	 */
 	public float getValue(String groupName, String dataName) {
 		return dataGroupRepository.getDATA(groupName, dataName).getValue();
 	}
 	
+	/**
+	 * sets a value in X-Plane.
+	 * 
+	 * @param key
+	 * @param value
+	 * @param sendNow
+	 */
 	public void setValue(String key, float value, boolean sendNow) {
 		String[] auxKey = key.split("\\.");
 		DATA data = dataGroupRepository.getDATA(auxKey[0], auxKey[1]);
@@ -261,30 +288,6 @@ public class XPlaneInterface {
 		DATAREFMessage drefMessage = new DATAREFMessage(dataRef, value);
 		sendMessage(drefMessage);
 	}
-	
-	public void sendVEH1(double latLonAlt[], float headPitchRoll[], float gearFlapThrust[]) throws UnknownHostException, IOException {
-		ByteBuffer byteBuffer = ByteBuffer.allocate(5 + 4 + latLonAlt.length*8 + headPitchRoll.length*4 + gearFlapThrust.length*4);
-
-		String sa = "VEH10";
-
-		byteBuffer.put(sa.getBytes());
-		byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
-		byteBuffer.putInt(0);
-
-		for (int i = 0; i < latLonAlt.length; i++) {
-			byteBuffer.putDouble(latLonAlt[i]);
-		}
-
-		for (int i = 0; i < headPitchRoll.length; i++) {
-			byteBuffer.putFloat(headPitchRoll[i]);
-		}
-
-		for (int i = 0; i < gearFlapThrust.length; i++) {
-			byteBuffer.putFloat(gearFlapThrust[i]);
-		}
-
-		xPlaneUDPSender.send(byteBuffer);
-	}	
 	
 	public void sendMessage(XPlaneUDPMessage xpm) {
 		xPlaneUDPSender.send(xpm.toByteBuffer());
