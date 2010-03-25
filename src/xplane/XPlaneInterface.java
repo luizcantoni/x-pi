@@ -27,7 +27,7 @@ import xplane.util.Util;
 * This class provides the interface between an application and X-Plane. 
 * With this class it is possible to receive and send data to X-Plane.
 * 
-* There is an important XML where must be configured the types of messages received and sent to X-Plane.
+* There is an important XML where must be configured the messages received and sent to X-Plane.
 * This XML is the mapping between the X-PI and X-Plane. 
 *  
 * There is an example: DATAGroupConfig.xml.
@@ -152,7 +152,7 @@ public class XPlaneInterface {
 	}
 
 	/**
-	 * Unregister (in X-Plane) the m桔獩堠䱍椠⁳桴⁥慭灰湩⁧敢睴敥⁮桴⁥偉堭愠摮堠倭慬敮essages that must not be received from X-Plane
+	 * Unregister (in X-Plane) the messages that must not be received from X-Plane
 	 * The argument is a comma separated string.
 	 *  
 	 * In practice, this method will send USEL messages to X-Plane.
