@@ -1,4 +1,12 @@
 <DATAGroups> 
+	<DATAGroup name="simulation">
+		<Entries>
+			<DATA name="visRatio" message="0" parameter="3" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="grndRatio" message="0" parameter="5" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="flitRatio" message="0" parameter="6" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>	
+	</DATAGroup>
+	
 	<DATAGroup name="position">
 		<Entries>
 			<DATA name="ias" message="3" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
@@ -35,7 +43,7 @@
 		<Entries>
 			<DATA name="realTime" message="1" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
 			<DATA name="totalTime" message="1" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
-			<DATA name="missingTime" message="1" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="missnTime" message="1" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
 			<DATA name="timer" message="1" parameter="3" readOnly="f" xplaneName="" unit="" convertTo="" desc=""></DATA>
 		</Entries>
 	</DATAGroup>
@@ -44,6 +52,22 @@
 		<Entries>
 			<DATA name="throttleCommand1" message="25" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
 			<DATA name="throttleActual1" message="26" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="throttleCommand2" message="25" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="throttleActual2" message="26" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="mixtureSetting1" message="29" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="power1" message="34" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="power2" message="34" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="thrust1" message="35" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="thrust2" message="35" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="torque1" message="36" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="torque2" message="36" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="RPM1" message="37" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="RPM2" message="37" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="propRPM1" message="38" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="propRPM2" message="38" parameter="1" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="EGT1" message="47" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="oilPressure1" message="49" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="oilTemp1" message="50" parameter="0" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
 		</Entries>
 	</DATAGroup>
 	
@@ -90,6 +114,18 @@
 			<DATA name="fuelFlow6" message="45" parameter="5" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
 			<DATA name="fuelFlow7" message="45" parameter="6" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
 			<DATA name="fuelFlow8" message="45" parameter="7" readOnly="true" xplaneName="" unit="" convertTo="" desc=""></DATA>
+		</Entries>
+	</DATAGroup>
+
+	<DATAGroup name="weight">
+		<Entries>
+			<DATA name="empty" message="63" parameter="0" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="payload" message="63" parameter="1" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="fuel" message="63" parameter="2" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="jetti" message="63" parameter="3" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="current" message="63" parameter="4" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="maximum" message="63" parameter="5" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
+			<DATA name="cg" message="63" parameter="7" readOnly="false" xplaneName="" unit="" convertTo="" desc=""></DATA>
 		</Entries>
 	</DATAGroup>
 	
