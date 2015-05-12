@@ -6,5 +6,5 @@ Being written in Java, this framework can be used in any environment that uses t
 
 The main purpose behind X-PI's development was to enable researchers with a tool to easily access and control a sophisticated flight simulator. Some uses for the library include Hardware-In-The_Loop? development, Unmanned Aerial Vehicles control, mission planning, etc.
 
-I've implement this library for my Master Thesis, since then I haven't used it anymore. If you have some doubt or sugestion, please contact me.
+I implemented this library for my Master Thesis (2008-2010), since then I haven't used it anymore. If you have some doubt or sugestion, please contact me.
 
